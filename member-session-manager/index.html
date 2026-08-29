@@ -44,18 +44,15 @@ const won=v=>Number(v||0).toLocaleString('ko-KR')+'원';
 function resetRows(){R.forEach(r=>{r.classList.remove('loading');r.querySelector('.pass').innerHTML='';r.querySelector('.rem').textContent='';r.querySelector('.note').textContent='—'})}
 function applyRows(rows){
   resetRows();
-  const by=new Map;
-  rows.forEach(x=>{if(!by.has(x.member_code))by.set(x.member_code,[]);by.get(x.member_code).push(x)});
+  const by=new Map(rows.map(x=>[x.member_code,x]));
   R.forEach(r=>{
-    const arr=(by.get(r.dataset.i)||[]).sort((a,b)=>String(a.purchased_on).localeCompare(String(b.purchased_on)));
-    if(!arr.length)return;
-    const current=arr.find(x=>Number(x.remaining_sessions)>0)||arr[arr.length-1];
-    const totalRemain=arr.reduce((sum,x)=>sum+Number(x.remaining_sessions||0),0);
+    const current=by.get(r.dataset.i);
+    if(!current)return;
     r.querySelector('.lesson').textContent=current.minutes+'분';
     r.querySelector('.pass').innerHTML='<span class="paid">'+current.pass_label+'</span>';
     r.querySelector('.amount').textContent=won(current.amount_won);
-    r.querySelector('.rem').textContent=totalRemain+'회';
-    r.querySelector('.note').textContent=arr.map((x,i)=>(i+1)+'회차 : '+x.purchased_on).join(' · ');
+    r.querySelector('.rem').textContent=Number(current.remaining_sessions||0)+'회';
+    r.querySelector('.note').textContent=current.payment_history||((current.purchase_round||1)+'회차 : '+current.purchased_on);
   });
 }
 async function load(){
