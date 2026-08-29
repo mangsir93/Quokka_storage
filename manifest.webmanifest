@@ -1,0 +1,26 @@
+{
+  "id": "/Quokka_storage/",
+  "name": "Quokka Storage",
+  "short_name": "Quokka",
+  "description": "Quokka Storage 회원 및 출석 관리",
+  "start_url": "/Quokka_storage/",
+  "scope": "/Quokka_storage/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F3F0E7",
+  "theme_color": "#667761",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
