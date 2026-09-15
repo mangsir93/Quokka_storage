@@ -52,4 +52,51 @@ button:focus-visible,a:focus-visible{outline:2px solid #718765;outline-offset:3p
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 .wrap{max-width:760px;padding-top:48px}.hero{text-align:left;padding:38px 32px}.hero h1{font-size:38px;margin:12px 0}.hero p{margin:0}.tabs{gap:10px}.tab{border-radius:16px;padding:22px;background:#fffefa;box-shadow:none;border-color:#e1e4da}.tab-text b{font-size:17px;font-weight:650}.tab-text small{font-size:12px;margin-top:5px}.icon{background:#eef2e7;color:#586b55;border-radius:12px;width:44px;height:44px;font-weight:500}.arrow{font-size:22px;font-weight:400;color:#819077}.category-title h2{font-size:18px;font-weight:650}.category-title span{font-size:10px}footer{margin-top:32px;letter-spacing:.12em;font-size:10px}@media(max-width:560px){.wrap{padding-top:24px}.hero{padding:28px 23px}.hero h1{font-size:32px}.tab{padding:19px 17px}}
-.ownerbar>.btn,.row>.btn{flex-shrink:0;white-space:nowrap}.memberTop>div,.itemTop>div{min-width:0}.monthbar .nav{flex-shrink:0}</style></head><body><main class="wrap"><section class="hero"><small>YOUR EVERYDAY PRACTICE</small><h1>Quokka Storage</h1><p>꾸준한 수업, 차분한 운영.</p></section><section class="category"><div class="category-title"><h2>오늘의 운영</h2><span>WORKSPACE</span></div><div class="tabs"><a class="tab" href="./member-session-manager/"><div class="tab-left"><div class="icon">✓</div><div class="tab-text"><b>회원 관리</b><small>회원 정보 · 수강권</small></div></div><div class="arrow">›</div></a><a class="tab" href="./attendance-manager/"><div class="tab-left"><div class="icon">✎</div><div class="tab-text"><b>출석 관리</b><small>출석 · 취소 · 노쇼</small></div></div><div class="arrow">›</div></a><a class="tab" href="./operations-dashboard/"><div class="tab-left"><div class="icon">▦</div><div class="tab-text"><b>운영 대시보드</b><small>소진매출 · 재등록 · 현금 흐름</small></div></div><div class="arrow">›</div></a></div></section><footer>Quokka Storage</footer></main><script>if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{}));}</script></body></html>
+.ownerbar>.btn,.row>.btn{flex-shrink:0;white-space:nowrap}.memberTop>div,.itemTop>div{min-width:0}.monthbar .nav{flex-shrink:0}
+/* Consistent application shell */
+body{background:#f5f6f3}
+.app-header{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 max(24px,calc((100vw - 1032px)/2));background:#fffefa;border-bottom:1px solid #e2e6dd}
+.brand-lockup{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#263c2c;white-space:nowrap}
+.brand-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#586b55;color:white;font:600 18px Georgia,serif}
+.brand-name{font-size:14px;font-weight:700;letter-spacing:-.025em}.workspace-label{font-size:11px;color:#74806e;border-left:1px solid #dce2d5;padding-left:16px;letter-spacing:.03em}
+.wrap{padding-top:28px}.home{display:none}
+.hero{background:transparent;border:0;border-radius:0;padding:0 0 22px;box-shadow:none}
+.hero small{font-size:9px;letter-spacing:.15em;color:#87917f}
+.hero h1{font-size:28px;line-height:1.25;margin:8px 0;color:#25372a;font-weight:720}
+.hero p{font-size:12px;color:#75806e}
+.section-nav{background:transparent;border-radius:0;padding:0;margin:0 0 18px;width:100%;gap:24px;border-bottom:1px solid #dfe5d8}
+.section-nav a{border-radius:0;padding:11px 0 12px;font-size:13px;color:#75806f;position:relative}
+.section-nav a[aria-current="page"]{background:transparent;box-shadow:none;color:#354e36}
+.section-nav a[aria-current="page"]:after{content:"";height:2px;position:absolute;bottom:-1px;left:0;right:0;background:#586b55;border-radius:2px}
+.data-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:38px;margin:0 0 12px}
+.data-status{font-size:11px;color:#7a8475;line-height:1.5;display:flex;align-items:center;gap:6px}
+.data-status:before{content:"";width:5px;height:5px;background:#a1b38e;border-radius:50%;flex-shrink:0}
+.data-status[data-state="error"]{color:#9a4b45}.data-status[data-state="error"]:before{background:#ba6862}
+.toolbar-actions{display:flex;gap:6px;flex-shrink:0}.toolbar-actions .btn{font-size:11px;min-height:32px;padding:6px 10px;border-radius:7px;white-space:nowrap}
+.toolbar-actions .logout-action{background:transparent;border-color:transparent;color:#7c8576}
+.panel{border-radius:12px;padding:20px;box-shadow:none;border-color:#e1e5da}
+.summary{margin-top:10px}.sum,.card,.metric{border-radius:10px;padding:16px}
+.sum b,.card b,.metric b{font-size:25px;line-height:1.25;font-weight:620;letter-spacing:-.04em;margin-top:8px}
+.sum small,.card small,.metric small{font-size:11px;letter-spacing:0;color:#707b68}
+.titleRow h2,h2{font-size:16px;font-weight:680}.titleRow small{font-size:10px}
+.member,.item{border-radius:10px}.memberBtns .passBtn{background:#eff3e9;border:1px solid #dce5d1;color:#516546}
+.badge{border:1px solid #e0e7d7;padding:3px 7px;border-radius:5px}
+.primary,.pri{box-shadow:0 1px 2px #253c2510}.btn{border-radius:8px}
+.forecast{grid-template-columns:repeat(3,minmax(0,1fr))}.forecast .heroCard{background:#edf3e6;border-color:#d5dfc9}
+.forecast .heroCard b{color:#3d5837}.monthbar{margin:10px 0 14px}.monthTitle{font-size:16px}
+.monthbar .nav{background:#fffefa;border:1px solid #e0e5d8;border-radius:8px;gap:0;padding:2px}.monthbar .nav .btn{background:transparent;border:0;min-height:30px;height:30px;padding:4px 12px;font-size:12px}
+.name{font-size:15px}.memberTop,.itemTop{align-items:flex-start}.memberBtns .btn{font-size:12px}
+.list .item{border:0;border-bottom:1px solid #e9ece4;border-radius:0;padding:14px 0}.list .item:last-child{border-bottom:0}
+.rank{background:#f2f5ed;border:1px solid #e4e9dc;border-radius:7px}
+.field input,.field select,.field textarea,.toolbar input,.toolbar select{border-radius:8px}
+@media(hover:hover){.section-nav a:hover{background:transparent;color:#354e36}.toolbar-actions .btn:hover{background:#edf2e6}}
+@media(max-width:720px){
+.app-header{height:56px;padding:0 16px}.brand-name{font-size:13px}.workspace-label{font-size:10px;padding-left:10px}
+.wrap{padding-top:22px}.hero{padding:0 2px 18px}.hero h1{font-size:25px}.hero p{font-size:12px}
+.section-nav{gap:20px;margin:0 0 12px}.section-nav a{flex:0 1 auto;font-size:12px;padding:10px 0}
+.data-toolbar{gap:8px}.data-status{font-size:10px}.toolbar-actions{gap:2px}
+.panel{padding:16px;border-radius:11px}.sum,.card,.metric{padding:13px}.sum b,.card b,.metric b{font-size:22px}
+.forecast{grid-template-columns:repeat(2,minmax(0,1fr))}.forecast>.card:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 10px}.forecast>.card:last-child b{margin:0}.forecast>.card:last-child .hint{grid-column:1/-1}
+.monthbar{align-items:center;gap:8px}.monthTitle{font-size:15px}.monthbar .nav .btn{padding:4px 9px}
+}
+.hero{padding:16px 0 26px}.hero h1{font-size:32px}.wrap{max-width:760px}.category{margin-top:16px}.tab{border-radius:12px}.tab:hover{transform:none;border-color:#bdcbb1}.category-title h2{font-size:15px}.category-title span{font-size:9px}.hero h1{letter-spacing:-.045em}</style></head><body><header class="app-header"><a class="brand-lockup" href="./" aria-label="Quokka Storage 홈"><span class="brand-mark" aria-hidden="true">Q</span><span class="brand-name">Quokka Storage</span></a><span class="workspace-label">수업 운영</span></header><main class="wrap"><section class="hero"><small>YOUR EVERYDAY PRACTICE</small><h1>Quokka Storage</h1><p>꾸준한 수업, 차분한 운영.</p></section><section class="category"><div class="category-title"><h2>오늘의 운영</h2><span>WORKSPACE</span></div><div class="tabs"><a class="tab" href="./member-session-manager/"><div class="tab-left"><div class="icon">✓</div><div class="tab-text"><b>회원 관리</b><small>회원 정보 · 수강권</small></div></div><div class="arrow">›</div></a><a class="tab" href="./attendance-manager/"><div class="tab-left"><div class="icon">✎</div><div class="tab-text"><b>출석 관리</b><small>출석 · 취소 · 노쇼</small></div></div><div class="arrow">›</div></a><a class="tab" href="./operations-dashboard/"><div class="tab-left"><div class="icon">▦</div><div class="tab-text"><b>운영 대시보드</b><small>소진매출 · 재등록 · 현금 흐름</small></div></div><div class="arrow">›</div></a></div></section><footer>Quokka Storage</footer></main><script>if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{}));}</script></body></html>
