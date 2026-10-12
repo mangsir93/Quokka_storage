@@ -159,7 +159,8 @@ input,select,textarea{background:white;border:1px solid #dbe5dd;border-radius:8p
 .q-ops-tabs button{flex:1;border:0;background:transparent;border-radius:8px;color:var(--muted);padding:10px 8px;font-size:12px;font-weight:650;white-space:nowrap;cursor:pointer}
 .q-ops-tabs button[aria-selected="true"]{background:var(--brand);color:white;box-shadow:none}
 #app>.panel.q-tab-hidden{display:none!important}
-#app>.summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0}
+#app>.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}
+#app>.summary .card:nth-child(4){display:none}/* Total consumed is already available in operational metrics. */
 #app>.summary .card:first-child{background:var(--soft);border-color:#d8e8db}
 #app>.panel .forecast,#app>.panel .cash{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 #quokkaExtras .extraGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}
@@ -187,7 +188,7 @@ body{padding-top:max(env(safe-area-inset-top),38px)}
 .card,.metric,.sum,.paceCount,.extraTile{padding:11px;border-radius:9px}
 .card b,.metric b,.sum b,.extraTile b{font-size:clamp(17px,4.8vw,22px)}
 #app>.summary{grid-template-columns:repeat(2,minmax(0,1fr))}
-#app>.summary .card:last-child{grid-column:1/-1}
+#app>.summary .card:last-child{grid-column:auto}
 #app>.panel .forecast,#app>.panel .cash{grid-template-columns:repeat(2,minmax(0,1fr))}
 #app>.panel .forecast .card:last-child:nth-child(3){grid-column:1/-1}
 #quokkaExtras .extraGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
