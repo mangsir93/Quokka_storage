@@ -1,34 +1,85 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f8faf7"><title>Quokka Storage · 수업 운영</title>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8faf7">
+<title>Quokka Storage · 수업 관리</title>
 <style>
-:root{--bg:#f8faf7;--paper:#fff;--ink:#18231b;--muted:#79847a;--green:#17692d;--soft:#edf5ee;--line:#e7ede7;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:var(--ink);font-synthesis:none}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);font-size:14px;letter-spacing:-.025em;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible{outline:3px solid #86b992;outline-offset:3px}
-.shell{max-width:1080px;margin:0 auto;padding:0 28px 90px}
-header{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:19px;font-weight:750;letter-spacing:-.055em}.brand b{color:var(--green)}.tag{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.03em}
-.hero{padding:56px 0 33px;display:flex;justify-content:space-between;align-items:end;gap:22px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--green);margin:0 0 14px}.hero h1{font-size:clamp(31px,4.4vw,48px);line-height:1.25;letter-spacing:-.07em;margin:0;font-weight:730}.hero p{font-size:14px;line-height:1.7;color:#6b776d;margin:14px 0 0}.date{align-self:flex-start;background:var(--soft);color:var(--green);font-size:12px;font-weight:650;padding:10px 14px;border-radius:10px;white-space:nowrap}
-.section-head{display:flex;align-items:center;justify-content:space-between;margin:18px 0 15px}.section-head h2{font-size:17px;letter-spacing:-.04em;font-weight:700;margin:0}.section-head span{font-size:12px;color:var(--muted)}
-.quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:198px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .15s,border-color .15s,box-shadow .15s}.tile:hover{transform:translateY(-2px);border-color:#c9ddcc;box-shadow:0 12px 25px #1b47200b}.tile-top{display:flex;align-items:center;justify-content:space-between}.tile-icon{display:grid;place-items:center;width:38px;height:38px;background:var(--soft);color:var(--green);border-radius:11px}.tile-icon svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.arrow{color:#9aa69a;font-size:23px;font-weight:300}.tile h3{font-size:20px;letter-spacing:-.045em;font-weight:700;margin:0 0 6px}.tile p{color:var(--muted);font-size:12px;margin:0;line-height:1.5}
-.note{margin-top:20px;border-radius:14px;background:var(--soft);padding:18px 20px;display:flex;gap:12px;align-items:center}.note-mark{color:var(--green);font-size:19px}.note b{display:block;font-size:13px;font-weight:700}.note p{margin:4px 0 0;color:#708173;font-size:12px;line-height:1.5}
-footer{padding:34px 0 0;font-size:11px;color:#a1aaa1;display:flex;justify-content:space-between}
-.mobile-nav{display:none}
-@media(max-width:700px){.shell{padding:0 19px 104px}header{height:64px}.brand{font-size:18px}.hero{padding:35px 0 23px;display:block}.hero h1{font-size:32px}.hero p{font-size:13px;margin-top:10px}.date{display:inline-block;margin-top:18px;padding:8px 12px}.section-head{margin-top:24px}.quick{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile{min-height:158px;padding:15px;border-radius:13px}.tile:last-child{grid-column:1/-1;min-height:132px}.tile-icon{width:34px;height:34px}.tile-icon svg{width:18px;height:18px}.tile h3{font-size:17px}.tile p{font-size:11px}.note{padding:15px}.mobile-nav{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:10px 10px calc(9px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:rgba(255,255,255,.96);backdrop-filter:blur(14px);z-index:40}.mobile-nav a{display:flex;flex-direction:column;align-items:center;gap:5px;color:#8a958a;font-size:10px}.mobile-nav a.active{color:var(--green);font-weight:750}.mobile-nav svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}footer{display:none}}
-@media(max-width:380px){.hero h1{font-size:29px}.tile h3{font-size:16px}}
-@media(prefers-reduced-motion:reduce){.tile{transition:none}.tile:hover{transform:none}}
-</style></head><body><div class="shell">
-<header><a class="brand" href="./">quokka<span style="color:#17692d">.</span>storage</a><span class="tag">MY WORKSPACE</span></header>
-<main><section class="hero"><div><p class="eyebrow">QUOKKA STORAGE</p><h1>수업에 집중하세요.<br>기록은 간단하게.</h1><p>회원, 출석, 매출을 한곳에서 관리합니다.</p></div><time class="date" id="todayLabel"></time></section>
-<div class="section-head"><h2>바로가기</h2><span>필요한 화면을 선택하세요</span></div>
-<div class="quick">
-<a class="tile" href="./member-session-manager/"><div class="tile-top"><span class="tile-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 8h5M19.5 5.5v5"/></svg></span><span class="arrow">↗</span></div><div><h3>회원 관리</h3><p>회원 정보와 수강권 확인</p></div></a>
-<a class="tile" href="./attendance-manager/"><div class="tile-top"><span class="tile-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18m-12 5 2 2 4-4"/></svg></span><span class="arrow">↗</span></div><div><h3>출석 기록</h3><p>수업 완료 · 서명 · 노쇼</p></div></a>
-<a class="tile" href="./operations-dashboard/"><div class="tile-top"><span class="tile-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10m5 10V5m5 15v-7m5 7V3"/></svg></span><span class="arrow">↗</span></div><div><h3>운영 대시보드</h3><p>소진매출 · 재등록 · 현금</p></div></a>
+:root{color-scheme:light;--bg:#f8faf7;--white:#fff;--ink:#1f2b22;--sub:#79857c;--line:#e5ebe5;--green:#23713b;--soft:#edf5ef;--font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;font-family:var(--font)}
+body{margin:0;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;letter-spacing:-.025em;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+a:focus-visible{outline:3px solid #9acaab;outline-offset:3px}
+.shell{max-width:940px;margin:auto;padding:0 26px 48px}
+header{height:65px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-size:18px;font-weight:650;letter-spacing:-.055em}
+.brand em{font-style:normal;color:var(--green)}
+.header-label{font-size:11px;color:var(--sub);font-weight:500}
+.intro{display:flex;align-items:end;justify-content:space-between;gap:12px;padding:28px 0 24px}
+.intro h1{margin:0;font-size:clamp(25px,3.2vw,33px);font-weight:650;letter-spacing:-.055em;line-height:1.3}
+.intro p{margin:6px 0 0;color:var(--sub);font-size:12px}
+.date{color:var(--green);background:var(--soft);border-radius:8px;padding:7px 10px;font-size:11px;font-weight:600;white-space:nowrap}
+.heading{display:flex;align-items:baseline;justify-content:space-between;margin:3px 0 11px}
+.heading h2{margin:0;font-size:14px;font-weight:650;letter-spacing:-.035em}
+.heading span{font-size:11px;color:var(--sub)}
+.menu{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.menu a{display:flex;align-items:center;gap:14px;min-height:78px;padding:14px 17px;transition:background .15s}
+.menu a+a{border-top:1px solid var(--line)}
+.menu a:hover{background:#f4f8f4}
+.icon{width:37px;height:37px;flex:0 0 37px;display:grid;place-items:center;border-radius:10px;background:var(--soft);color:var(--green)}
+.icon svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.menu-text{flex:1;min-width:0}
+.menu-text strong{display:block;font-size:15px;font-weight:650;letter-spacing:-.045em}
+.menu-text small{display:block;margin-top:2px;font-size:11px;color:var(--sub)}
+.chevron{color:#a3aea5;font-size:21px;font-weight:300}
+footer{margin-top:24px;color:#a1aba3;font-size:10px;text-align:center}
+.bottom{display:none}
+@media(max-width:700px){
+body{padding-top:max(env(safe-area-inset-top),38px)}
+.shell{padding:0 17px 104px}
+header{height:49px}
+.brand{font-size:16px}
+.intro{padding:20px 0 19px;align-items:center}
+.intro h1{font-size:26px}
+.intro p{font-size:12px}
+.date{font-size:10px;padding:6px 8px}
+.menu a{min-height:74px;padding:13px 14px}
+.menu-text strong{font-size:15px}
+.heading{margin-bottom:10px}
+footer{display:none}
+.bottom{display:grid;position:fixed;bottom:0;left:0;right:0;z-index:30;grid-template-columns:repeat(4,1fr);background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:9px 8px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(14px)}
+.bottom a{display:flex;flex-direction:column;align-items:center;gap:4px;color:#8b968c;font-size:10px}
+.bottom a[aria-current="page"]{color:var(--green);font-weight:650}
+.bottom svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+}
+@media(max-width:360px){.intro h1{font-size:23px}.date{font-size:9px}.menu a{gap:10px}}
+@media(prefers-reduced-motion:reduce){.menu a{transition:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><a href="./" class="brand">quokka<em>.</em>storage</a><span class="header-label">수업 관리</span></header>
+<main>
+<section class="intro"><div><h1>수업 관리</h1><p>회원 · 출석 · 매출</p></div><time class="date" id="today"></time></section>
+<div class="heading"><h2>바로가기</h2><span>3개 메뉴</span></div>
+<nav class="menu" aria-label="관리 메뉴">
+<a href="./member-session-manager/"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 8h5M19.5 5.5v5"/></svg></span><span class="menu-text"><strong>회원 관리</strong><small>회원 정보 · 수강권</small></span><span class="chevron">›</span></a>
+<a href="./attendance-manager/"><span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18m-12 5 2 2 4-4"/></svg></span><span class="menu-text"><strong>출석 기록</strong><small>출석 · 서명 · 노쇼</small></span><span class="chevron">›</span></a>
+<a href="./operations-dashboard/"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 20V10m5 10V5m5 15v-7m5 7V3"/></svg></span><span class="menu-text"><strong>운영 대시보드</strong><small>소진매출 · 재등록 · 현금</small></span><span class="chevron">›</span></a>
+</nav>
+</main>
+<footer>QUOKKA STORAGE</footer>
 </div>
-<div class="note"><span class="note-mark">✳</span><div><b>한 번의 기록이 다음 운영을 바꿉니다.</b><p>출석을 기록하면 수강권 잔량과 매출 통계에 반영됩니다.</p></div></div>
-</main><footer><span>QUOKKA STORAGE</span><span>Built for everyday practice</span></footer></div>
-<nav class="mobile-nav" aria-label="하단 메뉴">
-<a href="./" class="active" aria-current="page"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7"/></svg>홈</a>
+<nav class="bottom" aria-label="하단 메뉴">
+<a href="./" aria-current="page"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7"/></svg>홈</a>
 <a href="./member-session-manager/"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 8h5"/></svg>회원</a>
 <a href="./attendance-manager/"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 10h18m-12 5 2 2 4-4"/></svg>출석</a>
 <a href="./operations-dashboard/"><svg viewBox="0 0 24 24"><path d="M4 20V10m5 10V5m5 15v-7m5 7V3"/></svg>운영</a>
 </nav>
-<script>document.getElementById('todayLabel').textContent=new Intl.DateTimeFormat('ko-KR',{month:'long',day:'numeric',weekday:'short'}).format(new Date());if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{}));}</script></body></html>
+<script>
+document.getElementById('today').textContent=new Intl.DateTimeFormat('ko-KR',{month:'numeric',day:'numeric',weekday:'short'}).format(new Date());
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{}))}
+</script>
+</body></html>
