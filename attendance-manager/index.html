@@ -120,6 +120,37 @@ input,select,textarea{max-width:100%;min-width:0}
 .section-nav::-webkit-scrollbar{display:none}
 @media(max-width:640px){.wrap{padding:12px 12px 88px!important}.hero{padding:18px 19px!important;border-radius:16px!important}.panel{padding:15px!important;margin-top:11px!important}.section-nav{margin:11px 0 14px!important;width:100%;justify-content:space-between}.section-nav a{flex:1;text-align:center;padding:10px 5px!important;font-size:12px!important}.card,.metric,.sum{padding:12px!important}.card b,.metric b,.sum b{font-size:clamp(17px,4.8vw,23px)!important}.titleRow{gap:8px}.titleRow small{font-size:10px!important}.hero p{font-size:12px!important}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* Editorial minimal refinement · Quokka October 2026 */
+:root{--q-ink:#292c26;--q-brand:#454f3d;--q-soft:#efeee8;--q-bg:#f5f3ed;--q-border:#dddcd3;--q-muted:#77776e;--p:#fbfaf6;--b:#535f4d;--b2:#6c7664;--i:#292c26;--m:#77776e;--l:#deddd4;--s:#efeee8}
+body{background:#f5f3ed!important;color:#292c26!important;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif!important;letter-spacing:-.022em}
+.wrap{max-width:1100px!important}
+.app-header{background:#f5f3ed!important;border-bottom:1px solid #e2e0d7!important;box-shadow:none!important}
+.brand-name{letter-spacing:-.035em!important}
+.hero{background:#eeede6!important;border:0!important;border-bottom:1px solid #d9d8ce!important;border-radius:2px!important;padding:24px 25px!important}
+.hero small{letter-spacing:.18em!important;color:#777b6e!important}
+.hero h1{font-size:clamp(24px,2.8vw,31px)!important;font-weight:680!important;letter-spacing:-.05em!important}
+.hero p{color:#75766b!important}
+.panel{background:#fbfaf6!important;border:1px solid #e3e1d9!important;border-radius:5px!important;padding:21px 23px!important;box-shadow:none!important}
+.card,.metric,.sum,.paceCount,.extraTile{background:#f3f2ec!important;border:1px solid #e6e4db!important;border-radius:4px!important;box-shadow:none!important}
+.card.warn,.card.danger{background:#f1eee6!important}
+.item,.member,.hist,.pass{border-radius:3px!important}
+.titleRow h2,.panel h2{font-weight:680!important;letter-spacing:-.042em!important}
+.section-nav{background:transparent!important;border-bottom:1px solid #dcdad1!important;border-radius:0!important;padding:0!important;gap:20px!important}
+.section-nav a{background:transparent!important;border-radius:0!important;padding:11px 1px!important;color:#77796f!important}
+.section-nav a[aria-current="page"]{color:#313b30!important;border-bottom:2px solid #4c5948!important}
+.q-ops-tabs{position:sticky!important;background:rgba(245,243,237,.97)!important;border:0!important;border-bottom:1px solid #d7d7cc!important;border-radius:0!important;box-shadow:none!important;gap:16px!important;padding:4px 0!important}
+.q-ops-tabs button{border-radius:0!important;font-weight:600!important;padding:10px 5px!important;color:#74766b!important}
+.q-ops-tabs button[aria-selected="true"]{background:transparent!important;color:#303a2e!important;box-shadow:inset 0 -2px 0 #3d4c3b!important}
+.btn,.primary,.pri{border-radius:4px!important}
+input,select,textarea{border-radius:4px!important;background:#fcfbf8!important;border-color:#d9d8cf!important}
+.badge{border-radius:3px!important;font-weight:650!important}
+.summary,.forecast,.cash,.metrics,.extraGrid{gap:8px!important}
+.itemTop{gap:8px}
+.name{font-weight:700!important}
+#app>.panel .item{padding:11px 2px!important}
+.q-dashboard-lead{margin:13px 0 0!important}
+.q-dashboard-lead strong{font-weight:680!important}
+@media(max-width:640px){.wrap{padding:10px 12px 80px!important}.hero{padding:17px 16px!important}.panel{padding:15px!important;margin-top:9px!important}.section-nav{gap:7px!important}.section-nav a{font-size:11px!important;padding:10px 1px!important}.q-ops-tabs{gap:8px!important}.q-ops-tabs button{padding:10px 5px!important}.card,.metric,.sum,.extraTile{padding:11px!important}.panel h2{font-size:17px!important}.hero h1{font-size:25px!important}}
 </style></head><body><header class="app-header"><a class="brand-lockup" href="../" aria-label="Quokka Storage 홈"><span class="brand-name">Quokka Storage</span></a><span class="workspace-label">수업 운영</span></header><main class="wrap"><a class="home" href="../">← Quokka Storage</a><section class="hero"><small>ATTENDANCE</small><h1>출석 관리</h1><p>오늘의 출석과 수업 변경을 기록하세요.</p></section><nav class="section-nav" aria-label="관리 메뉴"><a href="../member-session-manager/">회원 관리</a><a href="../attendance-manager/" aria-current="page">출석 관리</a><a href="../operations-dashboard/">운영 대시보드</a></nav>
 <section id="authPanel" class="panel auth"><h2>관리자 로그인</h2><div class="field"><label>이메일</label><input id="email" type="email" autocomplete="email" placeholder="관리자 이메일"></div><div class="field"><label>비밀번호</label><input id="password" type="password" autocomplete="current-password" placeholder="비밀번호 6자 이상"></div><div id="setupField" class="field"><label>최초 설정 코드 · 처음 한 번만 사용</label><input id="setupCode" autocomplete="off" placeholder="설정 코드"></div><div class="auth-actions"><button id="loginBtn" class="btn primary">로그인</button><button id="signupBtn" class="btn secondary">첫 계정 만들기</button></div><div id="authMsg" class="msg"></div></section>
 <section id="claimPanel" class="panel hide"><h2>관리자 권한 연결</h2><p style="margin:0;color:var(--muted);font-size:13px">로그인은 완료됐어요. 최초 설정 코드를 입력하면 이 계정에 관리자 권한이 연결됩니다.</p><div class="field"><label>최초 설정 코드</label><input id="claimCode" autocomplete="off"></div><button id="claimBtn" class="btn primary" style="width:100%">관리자 권한 연결</button><div id="claimMsg" class="msg"></div></section>
