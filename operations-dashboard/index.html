@@ -249,10 +249,10 @@ footer{font-family:var(--qfont)!important;font-size:11px!important;color:#9a9e96
 const app=document.getElementById('app');if(!app)return;
 const sections=Array.from(app.children).filter(el=>el.classList.contains('panel'));
 const groups=[
-{label:'요약',titles:['월말 소진매출 예상','운영 의사결정 센터','운영 지표','최근 6개월 추이']},
-{label:'수업',titles:['캘린더 예정 수업','회원별 소진 속도','최근 출석 · 노쇼']},
-{label:'재등록',titles:['재등록 임박','향후 4주 재등록 예상','현재 수강권']},
-{label:'재무',titles:['현금 안전판','결제 내역','운영비 내역','대표 인출 내역','보증금 · 예치금','회원별 누적 결제액']}
+{label:'요약',titles:['이번 달, 얼마나 소진할까?','앞으로의 매출과 현금','운영 성과','최근 6개월의 변화']},
+{label:'수업',titles:['앞으로 예정된 수업','회원별 수업 빈도','최근 출석 · 노쇼']},
+{label:'재등록',titles:['재등록 확인이 필요한 회원','4주 안에 재등록할 가능성','남은 수강권']},
+{label:'재무',titles:['사업 자금 현황','결제 내역','운영비 내역','개인 인출 기록','보증금 · 예치금','회원별 총 결제액']}
 ];
 const tabs=document.createElement('nav');tabs.className='q-ops-tabs';tabs.setAttribute('aria-label','대시보드 상세 보기');
 const lead=document.createElement('div');lead.className='q-dashboard-lead';lead.innerHTML='<strong>상세 운영 분석</strong><small>필요한 정보만 선택해 보세요</small>';
