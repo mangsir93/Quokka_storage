@@ -1,5 +1,5 @@
 /* QUOKKA DESIGN SYSTEM 3.0 — consolidated, Korean-first */
-:root{--bg:#f7f9f7;--paper:#fff;--p:#fff;--brand:#176b35;--b:#176b35;--brand2:#3c8b52;--b2:#3c8b52;--ink:#202c23;--i:#202c23;--muted:#758278;--m:#758278;--line:#e4ebe5;--l:#e4ebe5;--soft:#eef6ef;--s:#eef6ef}
+:root{--bg:#f7f9f7;--paper:#fff;--p:#fff;--brand:#176b35;--b:#176b35;--brand2:#3c8b52;--b2:#3c8b52;--ink:#202c23;--i:#202c23;--muted:#657469;--m:#657469;--line:#e4ebe5;--l:#e4ebe5;--soft:#eef6ef;--s:#eef6ef}
 html{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:inherit;line-height:1.48;letter-spacing:-.025em;-webkit-font-smoothing:antialiased;font-size:14px}
 button,input,select,textarea{font:inherit}
@@ -90,13 +90,13 @@ body{padding-top:max(env(safe-area-inset-top),38px)}
 .member .actions{gap:6px}
 .member .actions button{font-size:12px}
 .q-bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:60;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:9px 9px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(15px)}
-.q-bottom-nav a{display:flex;flex-direction:column;align-items:center;gap:4px;color:#8c988e;font-size:10px;text-decoration:none;font-weight:500}
+.q-bottom-nav a{display:flex;flex-direction:column;align-items:center;gap:4px;color:#657469;font-size:10px;text-decoration:none;font-weight:500}
 .q-bottom-nav a[aria-current="page"]{color:var(--brand);font-weight:700}
 .q-bottom-nav svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 /* Quokka Visual Polish 3.1 — restrained Korean SaaS aesthetic */
-:root{--bg:#f8faf8;--paper:#ffffff;--p:#ffffff;--brand:#226b3b;--b:#226b3b;--brand2:#428457;--b2:#428457;--ink:#202d25;--i:#202d25;--muted:#78867c;--m:#78867c;--line:#e6ece7;--l:#e6ece7;--soft:#f0f6f1;--s:#f0f6f1}
+:root{--bg:#f8faf8;--paper:#ffffff;--p:#ffffff;--brand:#226b3b;--b:#226b3b;--brand2:#428457;--b2:#428457;--ink:#202d25;--i:#202d25;--muted:#657469;--m:#657469;--line:#e6ece7;--l:#e6ece7;--soft:#f0f6f1;--s:#f0f6f1}
 body{background:var(--bg);color:var(--ink);font-size:14px;letter-spacing:-.022em}
 .app-header{background:rgba(248,250,248,.97);border-bottom:1px solid var(--line)}
 .brand-name{font-weight:680;letter-spacing:-.065em}
@@ -104,19 +104,19 @@ body{background:var(--bg);color:var(--ink);font-size:14px;letter-spacing:-.022em
 .hero{padding:17px 0 18px}
 .hero small{color:#6f9678;font-size:10px;font-weight:600;letter-spacing:.11em}
 .hero h1{font-size:clamp(25px,3vw,31px);font-weight:680;letter-spacing:-.06em;margin:6px 0 5px}
-.hero p{font-size:12px;color:#849087}
+.hero p{font-size:12px;color:#657469}
 .section-nav{background:#f0f4f0;border-color:#e7ece8;border-radius:12px;padding:4px;box-shadow:inset 0 1px 2px #102b1610}
-.section-nav a{border-radius:9px;color:#798a7d;font-weight:550}
+.section-nav a{border-radius:9px;color:#657469;font-weight:550}
 .section-nav a[aria-current="page"]{background:#fff;color:#245f36;box-shadow:0 2px 6px #1a38201a}
 .section-nav a[aria-current="page"]::before,.section-nav a[aria-current="page"]::after{content:none;display:none}
 .panel{background:#fff;border:1px solid #e7ece8;border-radius:16px;box-shadow:0 4px 18px #172b1a06;padding:21px}
 .panel h2,.titleRow h2{font-size:18px;font-weight:680;letter-spacing:-.05em}
 .panel h3{font-weight:650}
 .titleRow{align-items:baseline}
-.titleRow small,.hint,.meta,.sub,.extraSub{color:#88938a}
+.titleRow small,.hint,.meta,.sub,.extraSub{color:#657469}
 .summary,.forecast,.cash,.metrics,.extraGrid{gap:10px}
 .card,.metric,.sum,.paceCount,.extraTile{background:#fff;border:1px solid #e9eeea;border-radius:12px;padding:15px}
-.card small,.metric small,.sum small,.extraTile small{color:#7c8a80;font-size:11px;letter-spacing:-.01em}
+.card small,.metric small,.sum small,.extraTile small{color:#657469;font-size:11px;letter-spacing:-.01em}
 .card b,.metric b,.sum b,.extraTile b{font-weight:680;letter-spacing:-.052em}
 .forecast .heroCard,#quokkaExtras .extraTile:nth-child(2),#app>.summary .card:first-child{background:#f0f7f1;border:1px solid #e0eee2}
 .forecast .heroCard b,#quokkaExtras .extraTile:nth-child(2) b{color:#1c6535}
@@ -167,7 +167,7 @@ input,select,textarea{background:#fff;border-color:#dfe7e0;border-radius:9px}
 .q-operations .list{scrollbar-width:thin}
 .q-operations .list .item{transition:background-color .15s ease}
 .q-operations .list .item:hover{background:#f9fbf9}
-.q-bottom-nav a,.section-nav a,.q-ops-tabs button{min-height:40px}
+.q-bottom-nav a,.section-nav a,.q-ops-tabs button{min-height:44px}
 @media(max-width:700px){
 .q-member #app>.summary,.q-attendance #app>.summary,.q-operations #app>.summary{grid-template-columns:repeat(2,minmax(0,1fr))}
 .q-member #app>.summary .sum:last-child,.q-attendance #app>.summary .sum:last-child{grid-column:auto}
@@ -181,3 +181,8 @@ input,select,textarea{background:#fff;border-color:#dfe7e0;border-radius:9px}
 }
 @media(hover:none){.q-operations .list .item:hover{background:transparent}}
 @media(prefers-reduced-motion:reduce){.q-operations .list .item{transition:none}}
+
+/* Minimum comfortable touch size and contrast */
+.q-bottom-nav a{min-height:44px}
+.section-nav a,.q-ops-tabs button{min-height:44px}
+.data-status,.titleRow small,.hint,.meta,.sub,.extraSub{color:#657469}
