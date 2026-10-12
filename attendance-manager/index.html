@@ -100,174 +100,103 @@ body{background:#f5f6f3}
 .forecast{grid-template-columns:repeat(2,minmax(0,1fr))}.forecast>.card:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 10px}.forecast>.card:last-child b{margin:0}.forecast>.card:last-child .hint{grid-column:1/-1}
 .monthbar{align-items:center;gap:8px}.monthTitle{font-size:15px}.monthbar .nav .btn{padding:4px 9px}
 }
-/* Quokka Design System 2026.10 · visual only */
-:root{--q-ink:#25362d;--q-brand:#607660;--q-soft:#e9ede5;--q-bg:#f7f8f5;--q-border:#e1e6dd;--q-muted:#69766b}
-body{background:var(--q-bg)!important;color:var(--q-ink);letter-spacing:-.018em;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1140px;margin:auto}
-.app-header{background:rgba(250,251,248,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.hero{background:linear-gradient(120deg,#e9efe7,#f3f5ef)!important;color:var(--q-ink)!important;border:1px solid var(--q-border)!important;box-shadow:none!important;padding:22px 26px!important;border-radius:19px!important}
-.hero h1{color:var(--q-ink)!important;font-size:clamp(24px,3vw,31px)!important;letter-spacing:-.045em}
-.hero p,.hero small{color:#637361!important}
-.panel{border:1px solid var(--q-border)!important;border-radius:17px!important;box-shadow:0 2px 14px rgba(38,54,42,.025)!important;background:#fffefa!important}
-.panel h2,.titleRow h2{font-size:clamp(16px,2vw,20px)!important;letter-spacing:-.035em}
-.card,.metric,.sum,.paceCount,.extraTile{border-radius:13px!important;box-shadow:none!important}
-.card b,.metric b,.sum b,.extraTile b{font-variant-numeric:tabular-nums;letter-spacing:-.035em;overflow-wrap:anywhere}
-.btn,button{transition:background .16s ease,border-color .16s ease,transform .16s ease}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #a4bba4!important;outline-offset:2px}
-input,select,textarea{max-width:100%;min-width:0}
-.item,.member,.hist{box-shadow:none!important}
-.section-nav{max-width:100%;overflow-x:auto;scrollbar-width:none}
-.section-nav::-webkit-scrollbar{display:none}
-@media(max-width:640px){.wrap{padding:12px 12px 88px!important}.hero{padding:18px 19px!important;border-radius:16px!important}.panel{padding:15px!important;margin-top:11px!important}.section-nav{margin:11px 0 14px!important;width:100%;justify-content:space-between}.section-nav a{flex:1;text-align:center;padding:10px 5px!important;font-size:12px!important}.card,.metric,.sum{padding:12px!important}.card b,.metric b,.sum b{font-size:clamp(17px,4.8vw,23px)!important}.titleRow{gap:8px}.titleRow small{font-size:10px!important}.hero p{font-size:12px!important}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
-/* Editorial minimal refinement · Quokka October 2026 */
-:root{--q-ink:#292c26;--q-brand:#454f3d;--q-soft:#efeee8;--q-bg:#f5f3ed;--q-border:#dddcd3;--q-muted:#77776e;--p:#fbfaf6;--b:#535f4d;--b2:#6c7664;--i:#292c26;--m:#77776e;--l:#deddd4;--s:#efeee8}
-body{background:#f5f3ed!important;color:#292c26!important;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif!important;letter-spacing:-.022em}
-.wrap{max-width:1100px!important}
-.app-header{background:#f5f3ed!important;border-bottom:1px solid #e2e0d7!important;box-shadow:none!important}
-.brand-name{letter-spacing:-.035em!important}
-.hero{background:#eeede6!important;border:0!important;border-bottom:1px solid #d9d8ce!important;border-radius:2px!important;padding:24px 25px!important}
-.hero small{letter-spacing:.18em!important;color:#777b6e!important}
-.hero h1{font-size:clamp(24px,2.8vw,31px)!important;font-weight:680!important;letter-spacing:-.05em!important}
-.hero p{color:#75766b!important}
-.panel{background:#fbfaf6!important;border:1px solid #e3e1d9!important;border-radius:5px!important;padding:21px 23px!important;box-shadow:none!important}
-.card,.metric,.sum,.paceCount,.extraTile{background:#f3f2ec!important;border:1px solid #e6e4db!important;border-radius:4px!important;box-shadow:none!important}
-.card.warn,.card.danger{background:#f1eee6!important}
-.item,.member,.hist,.pass{border-radius:3px!important}
-.titleRow h2,.panel h2{font-weight:680!important;letter-spacing:-.042em!important}
-.section-nav{background:transparent!important;border-bottom:1px solid #dcdad1!important;border-radius:0!important;padding:0!important;gap:20px!important}
-.section-nav a{background:transparent!important;border-radius:0!important;padding:11px 1px!important;color:#77796f!important}
-.section-nav a[aria-current="page"]{color:#313b30!important;border-bottom:2px solid #4c5948!important}
-.q-ops-tabs{position:sticky!important;background:rgba(245,243,237,.97)!important;border:0!important;border-bottom:1px solid #d7d7cc!important;border-radius:0!important;box-shadow:none!important;gap:16px!important;padding:4px 0!important}
-.q-ops-tabs button{border-radius:0!important;font-weight:600!important;padding:10px 5px!important;color:#74766b!important}
-.q-ops-tabs button[aria-selected="true"]{background:transparent!important;color:#303a2e!important;box-shadow:inset 0 -2px 0 #3d4c3b!important}
-.btn,.primary,.pri{border-radius:4px!important}
-input,select,textarea{border-radius:4px!important;background:#fcfbf8!important;border-color:#d9d8cf!important}
-.badge{border-radius:3px!important;font-weight:650!important}
-.summary,.forecast,.cash,.metrics,.extraGrid{gap:8px!important}
-.itemTop{gap:8px}
-.name{font-weight:700!important}
-#app>.panel .item{padding:11px 2px!important}
-.q-dashboard-lead{margin:13px 0 0!important}
-.q-dashboard-lead strong{font-weight:680!important}
-@media(max-width:640px){.wrap{padding:10px 12px 80px!important}.hero{padding:17px 16px!important}.panel{padding:15px!important;margin-top:9px!important}.section-nav{gap:7px!important}.section-nav a{font-size:11px!important;padding:10px 1px!important}.q-ops-tabs{gap:8px!important}.q-ops-tabs button{padding:10px 5px!important}.card,.metric,.sum,.extraTile{padding:11px!important}.panel h2{font-size:17px!important}.hero h1{font-size:25px!important}}
-/* Editorial Layout v3 */
-:root{--ed-rule:#dadbd1;--ed-ink:#252a23}
-body{background:#f3f2ed!important;color:var(--ed-ink)!important;font-size:14px!important;line-height:1.56!important;letter-spacing:-.018em!important}
-.wrap{max-width:1160px!important;padding:24px clamp(15px,3vw,42px) 84px!important}
-.app-header{min-height:60px!important;padding-inline:clamp(16px,3vw,42px)!important}
-.brand-name{font-family:Georgia,"Times New Roman",serif!important;font-size:20px!important;font-weight:500!important}
-.hero{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(160px,34%)!important;grid-template-areas:"eyebrow eyebrow" "title subtitle"!important;align-items:end!important;gap:8px 22px!important;background:transparent!important;border:0!important;border-top:1px solid var(--ed-rule)!important;border-bottom:1px solid var(--ed-rule)!important;padding:29px 0 26px!important;border-radius:0!important}
-.hero small{grid-area:eyebrow!important;font-size:10px!important;letter-spacing:.19em!important}
-.hero h1{grid-area:title!important;font-family:Georgia,"Noto Serif KR",serif!important;font-size:clamp(31px,4.4vw,52px)!important;font-weight:500!important;line-height:1.13!important;margin:0!important}
-.hero p{grid-area:subtitle!important;font-size:12px!important;line-height:1.7!important;text-align:right!important;margin:0!important}
-.panel{background:#faf9f5!important;padding:clamp(18px,2.5vw,30px)!important;border:1px solid var(--ed-rule)!important;border-radius:0!important;margin-top:14px!important}
-.panel h2,.titleRow h2{font-family:Georgia,"Noto Serif KR","Apple SD Gothic Neo",serif!important;font-size:clamp(19px,2.25vw,26px)!important;font-weight:500!important;line-height:1.32!important}
-.card,.metric,.sum,.paceCount,.extraTile{padding:17px!important;background:transparent!important;border:0!important;border-top:1px solid var(--ed-rule)!important;border-radius:0!important}
-.card b,.metric b,.sum b,.extraTile b{font-size:clamp(21px,2.65vw,31px)!important;font-weight:600!important;letter-spacing:-.055em!important;font-variant-numeric:tabular-nums!important}
-.summary,.forecast,.cash,.metrics,.extraGrid{gap:8px 16px!important}
-#app>.summary .card:first-child,#app>.summary .card:nth-child(3){background:transparent!important;border-color:var(--ed-rule)!important}
-.item,.member,.hist{background:transparent!important;border:0!important;border-bottom:1px solid var(--ed-rule)!important;border-radius:0!important;padding:15px 2px!important}
-.name{font-size:15px!important;font-weight:650!important}
-.badge{border-radius:2px!important;font-size:10px!important}
-.q-ops-tabs{margin:6px 0 17px!important}
-.q-dashboard-lead strong{font-family:Georgia,"Noto Serif KR",serif!important;font-size:18px!important;font-weight:500!important}
-.chartBox{border:0!important;border-top:1px solid var(--ed-rule)!important;border-radius:0!important;background:transparent!important}
-@media(max-width:700px){.wrap{padding:10px 15px 85px!important}.hero{grid-template-columns:1fr!important;grid-template-areas:"eyebrow" "title" "subtitle"!important;padding:20px 0 19px!important}.hero h1{font-size:34px!important}.hero p{text-align:left!important}.panel{padding:17px 16px!important;margin-top:10px!important}.panel h2{font-size:20px!important}.card,.metric,.sum,.paceCount,.extraTile{padding:13px 8px!important}.card b,.metric b,.sum b,.extraTile b{font-size:clamp(18px,5.2vw,25px)!important}.item,.member,.hist{padding:12px 1px!important}.summary,.forecast,.cash,.metrics,.extraGrid{gap:7px 11px!important}}
-#app>.summary{margin:16px 0!important}#app>.summary .sum:nth-child(3){border-top:2px solid #53684f!important}#members.members{gap:0!important}.member .actions button{min-height:42px!important}.history{gap:0!important}@media(max-width:700px){.member .actions button{font-size:12px!important;padding:10px 5px!important}}/* Typography correction v4: consistent Korean-first modern sans */
-:root{--quokka-font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Malgun Gothic",sans-serif}
-html,body,button,input,select,textarea{font-family:var(--quokka-font)!important}
-.brand-name,.hero h1,.panel h2,.titleRow h2,.category-title h2,.tab-text b,.q-dashboard-lead strong,footer{font-family:var(--quokka-font)!important}
-.brand-name{font-size:17px!important;font-weight:750!important;letter-spacing:-.055em!important}
-.hero h1{font-size:clamp(29px,4.1vw,44px)!important;font-weight:750!important;letter-spacing:-.058em!important;line-height:1.22!important}
-.panel h2,.titleRow h2{font-weight:700!important;letter-spacing:-.05em!important}
-.category-title h2{font-weight:720!important;letter-spacing:-.055em!important}
-.tab-text b{font-weight:700!important;letter-spacing:-.055em!important}
-.q-dashboard-lead strong{font-weight:700!important}
-footer{font-weight:450!important;letter-spacing:.04em!important}
-@media(max-width:700px){.hero h1{font-size:32px!important}.brand-name{font-size:17px!important}.tab-text b{font-size:19px!important}}
-/* Quiet Clarity typography */:root{--qfont:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}html,body,button,input,select,textarea{font-family:var(--qfont)!important}body{font-weight:400!important;letter-spacing:-.025em!important;background:#f7f7f3!important}.app-header{background:#f7f7f3!important}.brand-name{font-family:var(--qfont)!important;font-size:18px!important;font-weight:600!important}.hero h1{font-family:var(--qfont)!important;font-size:clamp(26px,3.3vw,36px)!important;font-weight:600!important}.hero p{font-size:13px!important}.panel h2,.titleRow h2{font-family:var(--qfont)!important;font-size:clamp(17px,2.2vw,21px)!important;font-weight:600!important}.name{font-weight:600!important}.card b,.sum b{font-weight:600!important}@media(max-width:700px){.hero h1{font-size:28px!important}.panel h2{font-size:18px!important}}/* Quokka Workspace 2.0 · unified functional design */
-:root{--q-bg:#f8faf7;--q-white:#fff;--q-ink:#18231b;--q-muted:#79847a;--q-green:#17692d;--q-soft:#edf5ee;--q-line:#e7ede7;--p:#fff;--b:#17692d;--b2:#348347;--i:#18231b;--m:#79847a;--l:#e7ede7;--s:#edf5ee;--bg:#f8faf7;--paper:#fff;--brand:#17692d;--brand2:#348347;--ink:#18231b;--muted:#79847a;--line:#e7ede7;--soft:#edf5ee}
-html,body,button,input,select,textarea{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif!important}
-body{background:var(--q-bg)!important;color:var(--q-ink)!important;font-size:14px!important;line-height:1.5!important;letter-spacing:-.025em!important}
-.wrap{max-width:1100px!important;margin:auto!important;padding:0 25px 110px!important}
-.app-header{height:66px!important;min-height:66px!important;background:rgba(248,250,247,.97)!important;border-bottom:1px solid var(--q-line)!important;padding:0 max(25px,calc((100vw - 1050px)/2))!important;box-shadow:none!important;display:flex!important;align-items:center!important}
-.brand-name{font-size:18px!important;font-weight:750!important;letter-spacing:-.06em!important;color:var(--q-ink)!important}
-.workspace-label{font-size:11px!important;color:var(--q-muted)!important;letter-spacing:.03em!important}
-.home{font-size:11px!important;color:var(--q-muted)!important;margin:18px 0 0!important}
-.hero{display:block!important;background:transparent!important;border:0!important;padding:22px 0 19px!important;border-radius:0!important;margin:0!important;box-shadow:none!important}
-.hero small{display:block!important;font-size:10px!important;color:var(--q-green)!important;letter-spacing:.13em!important;font-weight:700!important}
-.hero h1{font-size:clamp(27px,3.6vw,36px)!important;font-weight:740!important;letter-spacing:-.07em!important;line-height:1.25!important;margin:9px 0 5px!important}
-.hero p{font-size:12px!important;color:var(--q-muted)!important;text-align:left!important;line-height:1.6!important;margin:0!important}
-.section-nav{display:flex!important;width:100%!important;gap:6px!important;margin:0 0 20px!important;padding:4px!important;border:1px solid var(--q-line)!important;background:#f0f4ef!important;border-radius:11px!important;overflow:auto!important}
-.section-nav a{flex:1!important;text-align:center!important;border:0!important;border-radius:8px!important;padding:10px 7px!important;font-size:12px!important;font-weight:600!important;color:#78887a!important;white-space:nowrap!important}
-.section-nav a[aria-current="page"]{background:white!important;color:var(--q-green)!important;box-shadow:0 2px 6px #172b1a0c!important}
-.panel{background:var(--q-white)!important;border:1px solid var(--q-line)!important;border-radius:15px!important;padding:21px!important;box-shadow:none!important;margin-top:12px!important}
-.panel h2,.titleRow h2{font-family:inherit!important;font-size:19px!important;font-weight:730!important;letter-spacing:-.045em!important;line-height:1.35!important}
-.panel h3{font-size:15px!important;font-weight:700!important}
-.titleRow small,.hint,.meta,.sub,.extraSub{color:var(--q-muted)!important}
-.summary,.forecast,.cash,.metrics,.extraGrid{gap:10px!important}
-.card,.metric,.sum,.paceCount,.extraTile{background:#fff!important;border:1px solid var(--q-line)!important;border-radius:12px!important;padding:15px!important;box-shadow:none!important;min-width:0!important}
-.card small,.metric small,.sum small,.extraTile small{font-size:11px!important;color:var(--q-muted)!important;font-weight:500!important;line-height:1.5!important}
-.card b,.metric b,.sum b,.extraTile b{font-size:clamp(20px,2.6vw,28px)!important;font-weight:720!important;letter-spacing:-.055em!important;line-height:1.32!important;overflow-wrap:anywhere!important;font-variant-numeric:tabular-nums!important}
-.card.warn,.card.danger{background:#fcf7f1!important}
-.item,.member,.hist{border:1px solid var(--q-line)!important;border-radius:11px!important;background:#fff!important;padding:14px!important;margin:0!important;box-shadow:none!important}
-.name{font-size:14px!important;font-weight:700!important}
-.badge{background:var(--q-soft)!important;color:var(--q-green)!important;border:0!important;border-radius:7px!important;padding:5px 8px!important;font-size:10px!important;font-weight:700!important}
-.btn,button.primary,button.pri,.primary,.pri{border-radius:9px!important;font-weight:650!important}
-input,select,textarea{background:#fff!important;border:1px solid #dde5dd!important;border-radius:9px!important;min-width:0!important}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8ac49a!important;outline-offset:2px!important}
-.q-ops-tabs{position:sticky!important;top:5px!important;z-index:15!important;background:rgba(248,250,247,.97)!important;border:1px solid var(--q-line)!important;border-radius:12px!important;padding:5px!important;gap:3px!important;backdrop-filter:blur(12px)!important}
-.q-ops-tabs button{flex:1!important;font-size:12px!important;padding:11px 8px!important;border-radius:8px!important;color:var(--q-muted)!important}
-.q-ops-tabs button[aria-selected="true"]{background:var(--q-green)!important;color:#fff!important;box-shadow:none!important}
-.q-dashboard-lead{margin-top:17px!important}
-.q-dashboard-lead strong{font-family:inherit!important;font-size:15px!important;font-weight:730!important}
-.q-dashboard-lead small{font-size:11px!important}
-.chartBox{border:1px solid var(--q-line)!important;border-radius:11px!important;background:#fff!important;padding:14px!important}
-.chartBox h3{font-weight:700!important}
-#calendarUpcoming .item,#pace .item,#renew .item,#renewForecastList .item,#passList .item,#payList .item,#recent .item{border:0!important;border-bottom:1px solid var(--q-line)!important;border-radius:0!important;background:transparent!important;padding:13px 4px!important}
+/* QUOKKA DESIGN SYSTEM 3.0 — consolidated, Korean-first */
+:root{--bg:#f7f9f7;--paper:#fff;--p:#fff;--brand:#176b35;--b:#176b35;--brand2:#3c8b52;--b2:#3c8b52;--ink:#202c23;--i:#202c23;--muted:#758278;--m:#758278;--line:#e4ebe5;--l:#e4ebe5;--soft:#eef6ef;--s:#eef6ef}
+html{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:inherit;line-height:1.48;letter-spacing:-.025em;-webkit-font-smoothing:antialiased;font-size:14px}
+button,input,select,textarea{font:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #98c6a5;outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px 100px}
+.app-header{height:62px;min-height:62px;display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:none;padding:0 max(22px,calc((100vw - 1036px)/2))}
+.brand-name{font-size:17px;font-weight:700;letter-spacing:-.055em;color:var(--ink)}
+.workspace-label{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:0}
+.home{display:inline-block;margin:10px 0 0;padding:4px 0;background:transparent;border:0;font-size:11px;font-weight:500;color:var(--muted)}
+.hero{display:block;margin:0;padding:13px 0 17px;background:transparent;border:0;border-radius:0;box-shadow:none;color:var(--ink)}
+.hero small{display:block;color:var(--brand);font-size:10px;font-weight:650;letter-spacing:.1em}
+.hero h1{color:var(--ink);font-size:clamp(24px,3vw,30px);font-weight:700;letter-spacing:-.06em;line-height:1.26;margin:7px 0 5px}
+.hero p{color:var(--muted);font-size:12px;line-height:1.55;margin:0;text-align:left}
+.section-nav{display:flex;gap:4px;padding:4px;margin:0 0 16px;background:#edf3ee;border:1px solid var(--line);border-radius:11px;width:100%;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.section-nav a{flex:1;min-width:0;text-align:center;padding:10px 8px;font-size:12px;font-weight:600;white-space:nowrap;text-decoration:none;color:#738477;border:0;border-radius:8px;position:relative;box-shadow:none}
+.section-nav a[aria-current="page"]{background:white;color:var(--brand);border:0;box-shadow:0 1px 4px #12301a0b}
+.section-nav a[aria-current="page"]::after,.section-nav a[aria-current="page"]::before{content:none;display:none}
+.panel{background:white;border:1px solid var(--line);border-radius:14px;box-shadow:none;margin-top:12px;padding:20px}
+.panel h2,.titleRow h2{font-size:18px;font-weight:700;line-height:1.3;letter-spacing:-.045em}
+.panel h3{font-size:14px;font-weight:700;letter-spacing:-.025em}
+.titleRow{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.titleRow small,.hint,.meta,.sub,.extraSub{color:var(--muted);font-size:11px;line-height:1.5}
+.summary,.forecast,.cash,.metrics,.extraGrid{gap:9px}
+.card,.metric,.sum,.paceCount,.extraTile{background:white;border:1px solid var(--line);border-radius:11px;padding:13px;min-width:0;box-shadow:none}
+.card small,.metric small,.sum small,.extraTile small{display:block;font-size:11px;font-weight:500;line-height:1.45;color:var(--muted)}
+.card b,.metric b,.sum b,.extraTile b{display:block;font-size:clamp(19px,2.6vw,26px);font-weight:700;line-height:1.32;letter-spacing:-.05em;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.forecast .heroCard,#quokkaExtras .extraTile:nth-child(2){background:var(--soft);border-color:#d8e8db}
+.forecast .heroCard b,#quokkaExtras .extraTile:nth-child(2) b{color:var(--brand)}
+.card.danger,.sum.noShow{background:#fff9f8;border-color:#f1e5e2}
+.name{font-size:14px;font-weight:700;letter-spacing:-.035em}
+.item,.member,.hist{background:white;border:1px solid var(--line);border-radius:10px;padding:13px;box-shadow:none}
+.itemTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.itemTop>*{min-width:0}
+.money{font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.badge{background:var(--soft);color:var(--brand);border:1px solid #dce9df;border-radius:6px;padding:4px 7px;font-size:10px;font-weight:650}
+.btn,.primary,.pri,.secondary,.sec{border-radius:8px;font-weight:650;box-shadow:none}
+.primary,.pri{background:var(--brand);color:white}
+input,select,textarea{background:white;border:1px solid #dbe5dd;border-radius:8px;max-width:100%;min-width:0}
+.toolbar{display:flex;gap:9px;align-items:center;margin:13px 0}
+.toolbar input{flex:1;min-width:0}
+.members,.history{gap:10px}
+.member .pass,.member .passStack .pass{background:#f2f8f3;border:1px solid #e0ebe2;border-radius:8px;padding:10px}
+.member .actions button{min-height:40px}
+.sheet{border-radius:16px}
+.q-dashboard-lead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:17px 0 9px}
+.q-dashboard-lead strong{font-size:14px;font-weight:700}
+.q-dashboard-lead small{font-size:11px;color:var(--muted)}
+.q-ops-tabs{position:sticky;top:4px;z-index:15;display:flex;gap:4px;padding:4px;margin:0 0 14px;background:rgba(245,249,246,.96);border:1px solid var(--line);border-radius:11px;backdrop-filter:blur(12px);overflow-x:auto;scrollbar-width:none}
+.q-ops-tabs button{flex:1;border:0;background:transparent;border-radius:8px;color:var(--muted);padding:10px 8px;font-size:12px;font-weight:650;white-space:nowrap;cursor:pointer}
+.q-ops-tabs button[aria-selected="true"]{background:var(--brand);color:white;box-shadow:none}
+#app>.panel.q-tab-hidden{display:none!important}
+#app>.summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0}
+#app>.summary .card:first-child{background:var(--soft);border-color:#d8e8db}
+#app>.panel .forecast,#app>.panel .cash{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+#quokkaExtras .extraGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}
+#quokkaExtras .extraTile{background:white;border:1px solid var(--line);border-radius:10px;padding:13px}
+#quokkaExtras .extraList{max-height:300px;overflow:auto;scrollbar-width:thin}
+#quokkaExtras .extraRow{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:12px}
+#quokkaExtras .extraForm{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+#quokkaExtras .extraForm input,#quokkaExtras .extraForm select{flex:1;min-width:0;padding:10px}
+#quokkaExtras .extraForm button{background:var(--brand);color:white;border:0;border-radius:8px;padding:10px 14px}
+#calendarUpcoming .item,#pace .item,#renew .item,#renewForecastList .item,#passList .item,#payList .item,#recent .item{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:12px 3px}
 .q-bottom-nav{display:none}
 @media(max-width:700px){
-.wrap{padding:0 15px 104px!important}
-.app-header{height:60px!important;min-height:60px!important;padding:0 16px!important}
-.brand-name{font-size:17px!important}
-.home{margin:12px 0 0!important}
-.hero{padding:16px 0 18px!important}
-.hero h1{font-size:28px!important}
-.hero p{font-size:12px!important}
-.section-nav{margin-bottom:14px!important}
-.section-nav a{font-size:11px!important}
-.panel{padding:15px!important;border-radius:13px!important;margin-top:10px!important}
-.panel h2,.titleRow h2{font-size:17px!important}
-.card,.metric,.sum,.paceCount,.extraTile{padding:12px!important;border-radius:10px!important}
-.card b,.metric b,.sum b,.extraTile b{font-size:clamp(18px,5vw,24px)!important}
-.summary,.forecast,.cash,.metrics,.extraGrid{gap:8px!important}
-.q-ops-tabs{top:4px!important}
-.q-bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:60;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:rgba(255,255,255,.97);border-top:1px solid var(--q-line);padding:9px 9px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(15px)}
-.q-bottom-nav a{display:flex;flex-direction:column;align-items:center;gap:4px;color:#8c988e;font-size:10px;text-decoration:none!important;font-weight:550}
-.q-bottom-nav a[aria-current="page"]{color:var(--q-green);font-weight:750}
+body{padding-top:max(env(safe-area-inset-top),38px)}
+.wrap{padding:0 15px 110px}
+.app-header{height:49px;min-height:49px;padding:0 16px}
+.brand-name{font-size:16px}
+.home{margin:9px 0 0}
+.hero{padding:11px 0 14px}
+.hero h1{font-size:24px}
+.hero p{font-size:12px}
+.section-nav{margin-bottom:12px}
+.section-nav a{font-size:11px;padding:10px 5px}
+.panel{padding:14px;margin-top:10px;border-radius:12px}
+.panel h2,.titleRow h2{font-size:16px}
+.card,.metric,.sum,.paceCount,.extraTile{padding:11px;border-radius:9px}
+.card b,.metric b,.sum b,.extraTile b{font-size:clamp(17px,4.8vw,22px)}
+#app>.summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+#app>.summary .card:last-child{grid-column:1/-1}
+#app>.panel .forecast,#app>.panel .cash{grid-template-columns:repeat(2,minmax(0,1fr))}
+#app>.panel .forecast .card:last-child:nth-child(3){grid-column:1/-1}
+#quokkaExtras .extraGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+#quokkaExtras .extraGrid .extraTile:last-child:nth-child(3){grid-column:1/-1}
+.toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto}
+.toolbar input{width:100%;flex-basis:auto}
+.member .actions{gap:6px}
+.member .actions button{font-size:12px}
+.q-bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:60;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:9px 9px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(15px)}
+.q-bottom-nav a{display:flex;flex-direction:column;align-items:center;gap:4px;color:#8c988e;font-size:10px;text-decoration:none;font-weight:500}
+.q-bottom-nav a[aria-current="page"]{color:var(--brand);font-weight:700}
 .q-bottom-nav svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 }
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
-/* Attendance: quick session actions */
-#app>.summary{margin:14px 0!important}
-#app>.summary .sum:nth-child(3){background:var(--q-soft)!important;border-color:#d9e8dc!important}
-.members,.history{gap:10px!important}
-.member .actions button{min-height:43px!important}
-@media(max-width:700px){.member .actions{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important}.member .actions button{font-size:11px!important;padding:10px 4px!important}}
-/* Korean-first compact typography · 2026-10 */
-:root{--k-font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
-html,body,button,input,select,textarea{font-family:var(--k-font)!important}
-.brand-name{font-size:16px!important;font-weight:650!important;letter-spacing:-.055em!important}
-.hero h1{font-size:clamp(24px,3vw,29px)!important;font-weight:650!important;line-height:1.3!important;letter-spacing:-.055em!important}
-.hero small{font-size:10px!important}
-.hero p{font-size:12px!important}
-.panel h2,.titleRow h2{font-size:17px!important;font-weight:650!important;line-height:1.4!important}
-.panel h3{font-size:14px!important;font-weight:650!important}
-.name{font-size:14px!important;font-weight:650!important}
-.card b,.metric b,.sum b,.extraTile b{font-weight:650!important}
-@media(max-width:700px){body{padding-top:max(env(safe-area-inset-top),38px)!important}.app-header{height:49px!important;min-height:49px!important}.hero{padding:12px 0 13px!important}.hero h1{font-size:24px!important}.wrap{padding-bottom:100px!important}.panel{padding:13px!important}.panel h2,.titleRow h2{font-size:16px!important}.card,.metric,.sum,.paceCount,.extraTile{padding:11px!important}.card b,.metric b,.sum b,.extraTile b{font-size:clamp(17px,4.8vw,23px)!important}}
-.section-nav a[aria-current="page"]{border-bottom:0!important;box-shadow:none!important;transform:none!important;outline-offset:2px!important}.section-nav a[aria-current="page"]::after,.section-nav a[aria-current="page"]::before{content:none!important;display:none!important;background:none!important;border:0!important;box-shadow:none!important}</style></head><body><header class="app-header"><a class="brand-lockup" href="../" aria-label="Quokka Storage 홈"><span class="brand-name">Quokka Storage</span></a><span class="workspace-label">수업 운영</span></header><main class="wrap"><a class="home" href="../">← Quokka Storage</a><section class="hero"><small>SESSION LOG</small><h1>출석 관리</h1><p>끝난 수업을 기록하면 수강권이 차감됩니다.</p></section><nav class="section-nav" aria-label="관리 메뉴"><a href="../member-session-manager/">회원 관리</a><a href="../attendance-manager/" aria-current="page">출석 관리</a><a href="../operations-dashboard/">운영 대시보드</a></nav>
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body><header class="app-header"><a class="brand-lockup" href="../" aria-label="Quokka Storage 홈"><span class="brand-name">Quokka Storage</span></a><span class="workspace-label">수업 운영</span></header><main class="wrap"><a class="home" href="../">← Quokka Storage</a><section class="hero"><small>SESSION LOG</small><h1>출석 관리</h1><p>끝난 수업을 기록하면 수강권이 차감됩니다.</p></section><nav class="section-nav" aria-label="관리 메뉴"><a href="../member-session-manager/">회원 관리</a><a href="../attendance-manager/" aria-current="page">출석 관리</a><a href="../operations-dashboard/">운영 대시보드</a></nav>
 <section id="authPanel" class="panel auth"><h2>관리자 로그인</h2><div class="field"><label>이메일</label><input id="email" type="email" autocomplete="email" placeholder="관리자 이메일"></div><div class="field"><label>비밀번호</label><input id="password" type="password" autocomplete="current-password" placeholder="비밀번호 6자 이상"></div><div id="setupField" class="field"><label>최초 설정 코드 · 처음 한 번만 사용</label><input id="setupCode" autocomplete="off" placeholder="설정 코드"></div><div class="auth-actions"><button id="loginBtn" class="btn primary">로그인</button><button id="signupBtn" class="btn secondary">첫 계정 만들기</button></div><div id="authMsg" class="msg"></div></section>
 <section id="claimPanel" class="panel hide"><h2>관리자 권한 연결</h2><p style="margin:0;color:var(--muted);font-size:13px">로그인은 완료됐어요. 최초 설정 코드를 입력하면 이 계정에 관리자 권한이 연결됩니다.</p><div class="field"><label>최초 설정 코드</label><input id="claimCode" autocomplete="off"></div><button id="claimBtn" class="btn primary" style="width:100%">관리자 권한 연결</button><div id="claimMsg" class="msg"></div></section>
 <section id="app" class="hide"><div class="data-toolbar"><span id="dataStatus" class="data-status" role="status" aria-live="polite">정보 확인 중</span><div class="toolbar-actions"><button id="refreshData" class="btn secondary sec" type="button">새로고침</button><button id="logoutBtn" class="btn secondary sec logout-action" type="button">로그아웃</button></div></div><section class="summary"><div class="sum"><small>기록 가능 회원</small><b id="memberCount">0명</b></div><div class="sum"><small>남은 수강량</small><b id="totalRemain">0회</b></div><div class="sum"><small>오늘 출석</small><b id="todayCount">0회</b></div><div class="sum noShow"><small>오늘 노쇼</small><b id="todayNoShow">0회</b></div></section><section class="panel"><div class="titleRow"><h2>오늘 수업 기록하기</h2><small>출석 · 취소 · 노쇼</small></div><div id="members" class="members"></div></section><section class="panel"><div class="titleRow"><h2>최근 수업 기록</h2><small>전체 기록</small></div><div id="history" class="history"></div></section></section></main>
