@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f8faf7">
 <title>Quokka Storage · 수업 관리</title>
 <style>
-:root{color-scheme:light;--bg:#f8faf8;--white:#fff;--ink:#202d25;--sub:#7e8b81;--line:#e6ece7;--green:#226b3b;--soft:#f0f6f1;--font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+:root{color-scheme:light;--bg:#f8faf8;--white:#fff;--ink:#202d25;--sub:#64746a;--line:#e6ece7;--green:#226b3b;--soft:#f0f6f1;--font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;font-family:var(--font)}
 body{margin:0;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;letter-spacing:-.025em;-webkit-font-smoothing:antialiased}
@@ -50,7 +50,7 @@ header{height:49px}
 .heading{margin-bottom:10px}
 footer{display:none}
 .bottom{display:grid;position:fixed;bottom:0;left:0;right:0;z-index:30;grid-template-columns:repeat(4,1fr);background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:9px 8px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(14px)}
-.bottom a{display:flex;flex-direction:column;align-items:center;gap:4px;color:#8b968c;font-size:10px}
+.bottom a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;gap:4px;color:#8b968c;font-size:10px}
 .bottom a[aria-current="page"]{color:var(--green);font-weight:650}
 .bottom svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
 }
@@ -63,7 +63,7 @@ footer{display:none}
 <header><a href="./" class="brand">quokka<em>.</em>storage</a><span class="header-label">수업 관리</span></header>
 <main>
 <section class="intro"><div><h1>수업 관리</h1><p>회원 · 출석 · 매출</p></div><time class="date" id="today"></time></section>
-<div class="heading"><h2>바로가기</h2><span>3개 메뉴</span></div>
+<div class="heading"><h2>바로가기</h2><span>회원 · 출석 · 운영</span></div>
 <nav class="menu" aria-label="관리 메뉴">
 <a href="./member-session-manager/"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 8h5M19.5 5.5v5"/></svg></span><span class="menu-text"><strong>회원 관리</strong><small>회원 정보 · 수강권</small></span><span class="chevron">›</span></a>
 <a href="./attendance-manager/"><span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18m-12 5 2 2 4-4"/></svg></span><span class="menu-text"><strong>출석 기록</strong><small>출석 · 서명 · 노쇼</small></span><span class="chevron">›</span></a>
