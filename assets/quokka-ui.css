@@ -186,3 +186,9 @@ input,select,textarea{background:#fff;border-color:#dfe7e0;border-radius:9px}
 .q-bottom-nav a{min-height:44px}
 .section-nav a,.q-ops-tabs button{min-height:44px}
 .data-status,.titleRow small,.hint,.meta,.sub,.extraSub{color:#657469}
+
+/* Compact top navigation: shorter outer track, balanced inner buttons */
+.section-nav{padding:3px;gap:3px;border-radius:10px;margin-bottom:12px;box-shadow:none}
+.section-nav a{min-height:38px;padding:8px 5px;display:flex;align-items:center;justify-content:center;line-height:1.2;border-radius:7px;font-size:12px}
+.section-nav a[aria-current="page"]{box-shadow:0 1px 3px #1a382012}
+@media(max-width:700px){.section-nav{padding:3px;margin-bottom:10px}.section-nav a{min-height:38px;padding:8px 3px;font-size:11px}}
