@@ -77,3 +77,49 @@
   .q-attendance #signModal .modalActions{grid-template-columns:repeat(2,minmax(0,1fr))}
   .q-attendance #signModal #saveSig{grid-column:1/-1}
 }
+
+
+/* Native iOS date pickers can paint wider than their CSS box.
+   Draw the visible border on a clipped, content-width shell so the field
+   never touches or crosses the dialog's right padding. */
+.q-attendance .dateInputShell,
+.q-member .dateInputShell{
+  display:block;
+  position:relative;
+  box-sizing:border-box;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  overflow:hidden;
+  background:var(--paper);
+  border:1px solid #a7b6aa;
+  border-radius:8px;
+}
+.q-attendance .dateInputShell:focus-within,
+.q-member .dateInputShell:focus-within{
+  outline:2px solid var(--brand);
+  outline-offset:2px;
+}
+.q-attendance .dateInputShell input[type="datetime-local"],
+.q-member .dateInputShell input[type="month"]{
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  min-height:50px;
+  margin:0;
+  padding:10px 12px;
+  border:0;
+  border-radius:0;
+  outline:0;
+  box-shadow:none;
+  background:transparent;
+  font-size:1rem;
+  text-align:left;
+}
+.q-attendance .dateInputShell input[type="datetime-local"]::-webkit-date-and-time-value,
+.q-member .dateInputShell input[type="month"]::-webkit-date-and-time-value{
+  min-width:0;
+  text-align:left;
+}
