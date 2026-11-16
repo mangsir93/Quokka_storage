@@ -66,3 +66,8 @@
 .q-attendance #saveSig .saveSigMeta{
   display:block;font-size:.75rem;font-weight:500;white-space:nowrap;
 }
+
+@media(max-width:380px){
+  .q-attendance #signModal .modalActions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .q-attendance #signModal #saveSig{grid-column:1/-1}
+}
