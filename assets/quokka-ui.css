@@ -22,9 +22,15 @@
 .q-member .memberBtns{grid-template-columns:repeat(2,minmax(0,1fr))}
 .q-member .memberBtns .historyBtn{grid-column:1/-1}
 .historySheet{width:min(100%,640px)}
-.historyFilters{display:flex;align-items:end;gap:10px;margin:8px 0 4px}
-.historyFilters .field{margin:0;flex:1}
-.historyFilters .btn{white-space:nowrap}
+.historyFilters{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:10px;margin:8px 0 4px;min-width:0}
+.historyFilters .field{margin:0;min-width:0}
+.historyFilters input[type="month"]{display:block;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.historyFilters input[type="month"]::-webkit-date-and-time-value{min-width:0;text-align:left}
+.historyFilters .btn{white-space:nowrap;min-width:0;justify-self:end}
+@media(max-width:640px){
+  .q-member .historyFilters{grid-template-columns:minmax(0,1fr);align-items:stretch}
+  .q-member .historyFilters #historyAll{width:100%;justify-self:stretch}
+}
 .historyMetrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}
 .historyMetric{display:grid;gap:3px;border:1px solid var(--line);background:#f7faf7;padding:12px;border-radius:10px;min-width:0}
 .historyMetric small,.historyMetric span{color:var(--muted);font-size:.75rem}
@@ -37,7 +43,7 @@
 .historyLog{font-size:.75rem;color:var(--muted);font-weight:400}
 .historyPass,.historyNote{font-size:.8125rem;color:var(--muted);margin-top:4px;overflow-wrap:anywhere}
 .historyNote{padding-top:5px;border-top:1px dashed var(--line)}
-@media(max-width:380px){.historyFilters{align-items:stretch;flex-direction:column}.historyFilters .btn{width:100%}}
+
 
 
 /* iOS attendance dialogs: constrain native date/time controls and tidy actions. */
