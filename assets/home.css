@@ -60,7 +60,7 @@
 .q-home .home-auth .auth-actions{margin-top:12px}
 .q-home .home-goal-modal .sheet{max-width:400px}
 .q-home .home-goal-modal .field{margin:14px 0}
-.q-home .home-goal-modal .actions{margin-top:16px}
+.q-home .home-goal-modal .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:16px}
 .q-home .home-goal-modal .hint{margin-top:8px}
 @media(max-width:720px){.q-home .home-two-col{grid-template-columns:1fr}.q-home .home-card{padding:16px}.q-home .home-workload{padding:20px 17px}}
 @media(max-width:480px){.q-home .home-intro{align-items:flex-start;padding-top:19px}.q-home .home-intro h1{font-size:1.55rem}.q-home .home-finance-grid{grid-template-columns:1fr}.q-home .home-shortcuts{grid-template-columns:1fr}.q-home .home-shortcuts a{min-height:50px}.q-home .home-workload-line strong{font-size:3rem}.q-home .home-toolbar-actions{gap:3px}}
