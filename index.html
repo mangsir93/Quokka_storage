@@ -1,2 +1,66 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#f7f9f7" name="theme-color"/><title>수업 관리 · Quokka Storage</title><link href="./assets/quokka-ui.css?v=readable-20261013" rel="stylesheet"/><script defer="" src="./assets/quokka-ui.js?v=readable-20261013">
-</script></head><body class="q-home"><a class="skip-link" href="#main">본문으로 이동</a><header class="app-header"><div class="header-inner"><a aria-label="Quokka Storage 홈" class="brand-name" href="./">quokka<em>.</em>storage</a><span class="workspace-label">수업 관리</span></div></header><main class="wrap" id="main"><section class="intro"><div><h1>수업 관리</h1><p>회원 · 출석 · 매출</p></div><time class="date" id="today"></time></section><div class="heading"><h2>바로가기</h2></div><nav aria-label="관리 메뉴" class="menu"><a href="./member-session-manager/"><span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 8h5M19.5 5.5v5"></path></svg></span><span class="menu-text"><strong>회원 관리</strong><small>회원 정보 · 수강권</small></span><span aria-hidden="true" class="chevron">›</span></a><a href="./attendance-manager/"><span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="17" rx="2" width="18" x="3" y="4"></rect><path d="M8 2v4M16 2v4M3 10h18m-12 5 2 2 4-4"></path></svg></span><span class="menu-text"><strong>출석 기록</strong><small>출석 · 서명 · 노쇼</small></span><span aria-hidden="true" class="chevron">›</span></a><a href="./operations-dashboard/"><span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10m5 10V5m5 15v-7m5 7V3"></path></svg></span><span class="menu-text"><strong>운영 대시보드</strong><small>소진매출 · 재등록 · 현금</small></span><span aria-hidden="true" class="chevron">›</span></a></nav></main><nav aria-label="하단 메뉴" class="bottom"><a aria-current="page" href="./"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7"></path></svg>홈</a><a href="./member-session-manager/"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 8h5M19.5 5.5v5"></path></svg>회원</a><a href="./attendance-manager/"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="17" rx="2" width="18" x="3" y="4"></rect><path d="M8 2v4M16 2v4M3 10h18m-12 5 2 2 4-4"></path></svg>출석</a><a href="./operations-dashboard/"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10m5 10V5m5 15v-7m5 7V3"></path></svg>운영</a></nav></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f9f7">
+  <meta name="description" content="Quokka Storage · 오늘의 수업, 목표, 재등록과 매출을 한곳에서 확인합니다.">
+  <title>오늘의 운영 · Quokka Storage</title>
+  <link rel="stylesheet" href="./assets/quokka-ui.css?v=date-shell-20261116">
+  <link rel="stylesheet" href="./assets/home.css?v=home-20261121">
+  <script defer src="./assets/quokka-ui.js?v=readable-20261013"></script>
+</head>
+<body class="q-home q-home-dashboard">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="app-header"><div class="header-inner"><a class="brand-name" href="./" aria-label="Quokka Storage 홈">quokka<em>.</em>storage</a><span class="workspace-label">수업 관리</span></div></header>
+  <main class="wrap" id="main">
+    <section class="home-intro" aria-label="오늘의 운영 안내">
+      <div><p class="home-eyebrow">DAILY OVERVIEW</p><h1>오늘의 운영</h1><p>수업에 집중할 수 있도록, 필요한 것부터.</p></div>
+      <time class="date" id="today"></time>
+    </section>
+    <section class="panel home-auth hide" id="authPanel" aria-labelledby="authTitle">
+      <h2 id="authTitle">관리자 로그인</h2>
+      <p class="sub">운영 정보는 관리자에게만 보여줘.</p>
+      <form id="loginForm">
+        <div class="field"><label for="homeEmail">이메일</label><input id="homeEmail" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="homePassword">비밀번호</label><input id="homePassword" type="password" autocomplete="current-password" required></div>
+        <div class="auth-actions"><button class="btn primary" type="submit" id="homeLogin">로그인</button><a class="btn secondary" href="./attendance-manager/">출석 관리</a></div>
+      </form>
+      <p class="msg" id="homeAuthMsg" role="status"></p>
+    </section>
+    <section class="hide" id="homeApp" aria-label="운영 대시보드">
+      <div class="home-toolbar"><span class="data-status" id="homeStatus" role="status" aria-live="polite">운영 정보 불러오는 중</span><div class="home-toolbar-actions"><button class="btn secondary" id="homeRefresh" type="button">새로고침</button><button class="btn secondary logout-action" id="homeLogout" type="button">로그아웃</button></div></div>
+      <section class="home-card home-workload" aria-labelledby="workloadTitle">
+        <div class="home-heading"><div><p class="home-eyebrow">MONTHLY GOAL</p><h2 id="workloadTitle">이번 달 수업 목표</h2><small>50분 1회 · 90분 1.5회 환산</small></div><button class="btn secondary" id="editGoal" type="button">목표 수정</button></div>
+        <div class="home-workload-line"><strong id="workloadValue">—</strong><span id="goalValue">/ 목표 확인 중</span></div>
+        <div class="home-progress" id="goalProgress" role="progressbar" aria-label="월간 환산 수업 목표 달성률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="goalBar"></span></div>
+        <div class="home-workload-foot"><span id="goalDetail">출석 기록을 계산하고 있어.</span><b id="goalRate">—</b></div>
+        <p class="home-workload-note" id="workloadBreakdown">수강권 분할 차감은 한 수업으로 합산해.</p>
+      </section>
+      <div class="home-two-col">
+        <section class="home-card" aria-labelledby="todayTitle">
+          <div class="home-heading"><div><h2 id="todayTitle">오늘의 수업</h2><small>실제 출석과 남은 캘린더 예약</small></div><a class="home-link" href="./attendance-manager/">출석 관리 ›</a></div>
+          <div class="home-mini-stats"><div class="home-mini-stat"><small>오늘 출석 완료</small><strong id="todayDone">—</strong></div><div class="home-mini-stat"><small>오늘 남은 예약</small><strong id="todayUpcoming">—</strong></div></div>
+          <ul class="home-schedule" id="todaySchedule"><li class="home-empty">일정을 확인하고 있어.</li></ul>
+          <p class="home-finance-note" id="calendarSyncInfo"></p>
+        </section>
+        <section class="home-card" aria-labelledby="taskTitle">
+          <div class="home-heading"><div><h2 id="taskTitle">지금 확인할 일</h2><small>실제 데이터를 기준으로 정리했어</small></div></div>
+          <div class="home-tasks" id="homeTasks"><p class="home-empty">확인할 항목을 불러오고 있어.</p></div>
+        </section>
+      </div>
+      <section class="home-card home-finance" aria-labelledby="financeTitle">
+        <div class="home-heading"><div><h2 id="financeTitle">이번 달 매출</h2><small>결제 등록액과 수업 소진액을 구분해</small></div><a class="home-link" href="./operations-dashboard/">운영 상세 ›</a></div>
+        <div class="home-finance-grid">
+          <div class="home-finance-tile"><small>수업 소진매출</small><strong id="homeConsumed">—</strong><p>출석·노쇼 차감에 따른 매출</p></div>
+          <div class="home-finance-tile"><small>수강권 등록액</small><strong id="homeRegistered">—</strong><p>수강권에 입력된 결제일 기준 금액</p></div>
+        </div>
+        <p class="home-finance-note">※ 등록액은 실제 통장 입금액과 다를 수 있어. 미수금·부분입금은 아직 별도 확인이 필요해.</p>
+      </section>
+    </section>
+    <section class="home-links" aria-labelledby="quickLinksTitle"><h2 id="quickLinksTitle">빠른 이동</h2><nav class="home-shortcuts" aria-label="관리 바로가기"><a href="./member-session-manager/"><span>회원 · 수강권</span><span aria-hidden="true">›</span></a><a href="./attendance-manager/"><span>출석 · 서명</span><span aria-hidden="true">›</span></a><a href="./operations-dashboard/"><span>매출 · 재등록</span><span aria-hidden="true">›</span></a></nav></section>
+  </main>
+  <div class="modal hide home-goal-modal" id="goalModal" role="dialog" aria-modal="true" aria-labelledby="goalTitle"><div class="sheet"><h2 id="goalTitle">월간 수업 목표</h2><p class="sub" id="goalMonthText">이번 달 목표를 설정해.</p><form id="goalForm"><div class="field"><label for="goalInput">목표 환산 횟수</label><input id="goalInput" type="number" inputmode="decimal" min="1" max="300" step="0.5" required></div><p class="hint">50분은 1회, 90분은 1.5회로 계산해.</p><div class="actions"><button class="btn secondary" type="button" id="goalCancel">취소</button><button class="btn primary" type="submit" id="goalSave">목표 저장</button></div><p class="msg" id="goalMsg" role="status"></p></form></div></div>
+  <nav class="bottom" aria-label="하단 메뉴"><a href="./" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7"></path></svg>홈</a><a href="./member-session-manager/"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 8h5M19.5 5.5v5"></path></svg>회원</a><a href="./attendance-manager/"><svg aria-hidden="true" viewBox="0 0 24 24"><rect height="17" rx="2" width="18" x="3" y="4"></rect><path d="M8 2v4M16 2v4M3 10h18m-12 5 2 2 4-4"></path></svg>출석</a><a href="./operations-dashboard/"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10m5 10V5m5 15v-7m5 7V3"></path></svg>운영</a></nav>
+  <script type="module" src="./assets/home.js?v=home-20261121"></script>
+</body></html>
