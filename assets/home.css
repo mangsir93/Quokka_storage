@@ -1,0 +1,69 @@
+/* Quokka Storage — operations-first home. Scoped to avoid changing existing pages. */
+.q-home .wrap{max-width:980px}
+.q-home .home-intro{padding:24px 0 16px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.q-home .home-intro h1{font-size:clamp(1.5rem,4vw,2rem);letter-spacing:-.055em}
+.q-home .home-intro p{margin-top:6px;color:var(--muted);font-size:.875rem}
+.q-home .home-eyebrow{font-size:.6875rem;letter-spacing:.11em;font-weight:750;color:var(--brand);margin-bottom:6px}
+.q-home .home-intro .date{white-space:nowrap;align-self:center}
+.q-home .home-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.q-home .home-toolbar-actions{display:flex;gap:8px}
+.q-home .home-toolbar .btn{min-height:38px;padding:7px 10px;font-size:.8125rem}
+.q-home .home-toolbar .logout-action{border-color:transparent;background:transparent;color:var(--muted)}
+.q-home .home-card{background:#fff;border:1px solid var(--line);border-radius:14px;min-width:0;padding:18px}
+.q-home .home-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:14px}
+.q-home .home-heading h2{font-size:1rem;font-weight:680;letter-spacing:-.035em}
+.q-home .home-heading small{display:block;margin-top:4px;color:var(--muted);font-size:.75rem}
+.q-home .home-heading .btn{min-height:36px;padding:6px 10px;font-size:.75rem;white-space:nowrap}
+.q-home .home-workload{background:#f0f7f1;border-color:#d6e6d9;padding:22px 20px}
+.q-home .home-workload-line{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.q-home .home-workload-line strong{font-size:clamp(2.75rem,8vw,4.125rem);line-height:1.05;letter-spacing:-.075em;font-weight:700;color:#1c5e36;font-variant-numeric:tabular-nums}
+.q-home .home-workload-line span{font-size:1.25rem;color:#617468;font-weight:550}
+.q-home .home-progress{height:10px;border-radius:999px;background:#dbe8dd;overflow:hidden;margin:18px 0 12px}
+.q-home .home-progress span{display:block;height:100%;width:0;background:#287044;border-radius:999px;transition:width .25s ease}
+.q-home .home-workload-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#50665a;font-size:.8125rem}
+.q-home .home-workload-foot b{color:#27543a}
+.q-home .home-workload-note{margin-top:12px;font-size:.75rem;color:#64776a}
+.q-home .home-two-col{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:12px;margin-top:12px}
+.q-home .home-mini-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.q-home .home-mini-stat{background:#f7faf7;border-radius:9px;padding:12px;min-width:0}
+.q-home .home-mini-stat small{display:block;font-size:.75rem;color:var(--muted)}
+.q-home .home-mini-stat strong{display:block;font-size:1.375rem;letter-spacing:-.04em;margin-top:4px;font-variant-numeric:tabular-nums}
+.q-home .home-schedule{list-style:none;margin:0;padding:0}
+.q-home .home-schedule li{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-top:1px solid #eef2ee;min-width:0}
+.q-home .home-schedule .home-time{font-size:.8125rem;font-weight:650;color:#3b5945;white-space:nowrap;min-width:42px;padding-top:2px}
+.q-home .home-schedule .home-appointment{min-width:0;flex:1}
+.q-home .home-schedule .home-appointment b{display:block;font-size:.875rem;font-weight:600;overflow-wrap:anywhere}
+.q-home .home-schedule .home-appointment small{display:block;color:var(--muted);font-size:.75rem;margin-top:2px}
+.q-home .home-link{display:inline-flex;align-items:center;gap:5px;color:var(--brand);font-size:.8125rem;font-weight:650;min-height:38px;margin-top:10px}
+.q-home .home-tasks{display:grid;gap:0}
+.q-home .home-task{display:flex;align-items:center;gap:10px;padding:13px 0;border-top:1px solid #eef2ee;min-width:0}
+.q-home .home-task:first-child{border-top:0;padding-top:0}
+.q-home .home-task-icon{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:#edf4ee;color:var(--brand);font-size:.875rem;font-weight:700}
+.q-home .home-task-body{flex:1;min-width:0}
+.q-home .home-task-body strong{display:block;font-size:.875rem;font-weight:620}
+.q-home .home-task-body small{display:block;font-size:.75rem;color:var(--muted);margin-top:3px;line-height:1.5;overflow-wrap:anywhere}
+.q-home .home-task-arrow{font-size:1.125rem;color:#8a9a8d}
+.q-home .home-finance{margin-top:12px}
+.q-home .home-finance-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.q-home .home-finance-tile{padding:14px;border:1px solid #e4eae5;border-radius:10px;background:#fbfcfb;min-width:0}
+.q-home .home-finance-tile small{font-size:.75rem;color:var(--muted);display:block}
+.q-home .home-finance-tile strong{display:block;margin:6px 0;font-size:clamp(1.125rem,3.5vw,1.5rem);letter-spacing:-.045em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.q-home .home-finance-tile p{font-size:.75rem;line-height:1.55;color:var(--muted)}
+.q-home .home-finance-note{font-size:.75rem;color:var(--muted);margin-top:12px;line-height:1.6}
+.q-home .home-links{margin:20px 0 10px}
+.q-home .home-links h2{font-size:.9375rem;margin-bottom:10px}
+.q-home .home-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.q-home .home-shortcuts a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:60px;padding:12px 14px;border-radius:11px;border:1px solid var(--line);background:#fff;font-size:.875rem;font-weight:620}
+.q-home .home-shortcuts a span:last-child{color:#7b9481;font-size:1.25rem}
+.q-home .home-empty{padding:13px 0;color:var(--muted);font-size:.8125rem;line-height:1.65}
+.q-home .home-auth{max-width:480px;margin:14px auto}
+.q-home .home-auth .auth-actions{margin-top:12px}
+.q-home .home-goal-modal .sheet{max-width:400px}
+.q-home .home-goal-modal .field{margin:14px 0}
+.q-home .home-goal-modal .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:16px}
+.q-home .home-goal-modal .hint{margin-top:8px}
+@media(max-width:720px){.q-home .home-two-col{grid-template-columns:1fr}.q-home .home-card{padding:16px}.q-home .home-workload{padding:20px 17px}}
+@media(max-width:480px){.q-home .home-intro{align-items:flex-start;padding-top:19px}.q-home .home-intro h1{font-size:1.55rem}.q-home .home-finance-grid{grid-template-columns:1fr}.q-home .home-shortcuts{grid-template-columns:1fr}.q-home .home-shortcuts a{min-height:50px}.q-home .home-workload-line strong{font-size:3rem}.q-home .home-toolbar-actions{gap:3px}}
+@media(prefers-reduced-motion:reduce){.q-home .home-progress span{transition:none}}
+.q-home .home-heading > div{min-width:0}
+.q-home .home-heading .home-link{white-space:nowrap;flex-shrink:0;margin-top:0}
